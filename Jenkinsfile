@@ -4,13 +4,13 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/DarshTurakhia/Age-Calculator'
+                git branch: 'main', url: 'https://github.com/DarshTurakhia/Age-Calculator'
             }
         }
 
         stage('Build') {
             steps {
-                sh 'python3 age_calculator.py'
+                sh 'python3 Age.py'
             }
         }
 
