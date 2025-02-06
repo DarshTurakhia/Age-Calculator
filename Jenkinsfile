@@ -17,7 +17,7 @@ pipeline {
         stage('Security Scan') {
             steps {
                 sh '/var/lib/jenkins/tools/dependency-check/bin/dependency-check.sh --scan ./ --format HTML --out report.html'
-                archiveArtifacts 'report.html'
+                //archiveArtifacts 'report.html'
             }
         }
 
