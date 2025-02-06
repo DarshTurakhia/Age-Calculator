@@ -23,7 +23,7 @@ pipeline {
 
         stage('Deploy to Target VM') {
             steps {
-                sh 'scp -o StrictHostKeyChecking=no Age.py darsh@10.0.1.7:~/'
+                sh 'scp -o StrictHostKeyChecking=no /home/darsh/Age-Calculator/Age.py darsh@10.0.1.7:~/'
             }
         }
     }
