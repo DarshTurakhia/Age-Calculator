@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/DarshTurakhia/Age-Calculator.git'
+                git 'https://github.com/DarshTurakhia/Age-Calculator'
             }
         }
 
@@ -23,7 +23,7 @@ pipeline {
 
         stage('Deploy to Target VM') {
             steps {
-                sh 'scp -o StrictHostKeyChecking=no age_calculator.py darsh@10.0.1.7:~/'
+                sh 'scp -o StrictHostKeyChecking=no Age.py darsh@10.0.1.7:~/'
             }
         }
     }
